@@ -28,8 +28,6 @@ class Gobelet() :
     def lancer(self):
         jet = De().lancer() 
         self.valeur = self.valeur + jet
-        self.afficher_score()
-        return self.get_valeur()
 
     #affiche en console le score du dernier lancer de gobelet
     def afficher_score(self):
