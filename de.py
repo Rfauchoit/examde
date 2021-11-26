@@ -21,6 +21,6 @@ class De:
         self._valeur = random.randint(1,6)
         print (f"La valeur du dé est {self._valeur}")
     
-lancerde = De()
-lancerde.lancer()
+# lancerde = De()
+# lancerde.lancer()
 

@@ -1,16 +1,22 @@
 from de import De
 
 class Gobelet() :
-    def __init__(self, nbdes : list ):
+    def __init__(self, nbdes : int ):
         self.valeur = 0
         self.des = []
         self.nbdes=nbdes
-        self.ajoutliste()
 
-    #Ajout un certain nombre de dés dans une liste
+    #Ajout un certain nombre de dés dans une 
     def ajoutliste(self):
+        var= 0
         for i in range(self.nbdes):
-            (self.des).append(i)
+            self.des.append(De())
+            self.des[i].lancer()
+            var+= self.des[i].get_valeur() 
+        return var
+
+    def lancer(self):
+        pass
 
     @property   
     def des(self):
@@ -25,12 +31,10 @@ class Gobelet() :
         return self.valeur
     
     #change la valeur des dés du gobelet ; met à jour la valeur du gobelet
-    def lancer(self):
-        jet = De().lancer() 
-        self.valeur = self.valeur + jet
+    
 
     #affiche en console le score du dernier lancer de gobelet
-    def afficher_score(self):
-        print(self.valeur)
+    # def afficher_score(self):
+    #     print(De.lancer())
 
-lancer = Gobelet(4).afficher_score()
+# lancer = Gobelet(4).lancer()
