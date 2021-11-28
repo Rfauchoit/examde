@@ -6,7 +6,7 @@ class Gobelet() :
         self.des = []
         self.nbdes=nbdes
 
-    #Ajout un certain nombre de dés dans une 
+    #Ajout un certain nombre de dés dans une liste et en retourne une valeur
     def ajoutliste(self):
         var= 0
         for i in range(self.nbdes):
@@ -14,9 +14,6 @@ class Gobelet() :
             self.des[i].lancer()
             var+= self.des[i].get_valeur() 
         return var
-
-    def lancer(self):
-        pass
 
     @property   
     def des(self):
@@ -29,12 +26,5 @@ class Gobelet() :
     #renvoie la valeur du gobelet
     def get_valeur(self):
         return self.valeur
-    
-    #change la valeur des dés du gobelet ; met à jour la valeur du gobelet
-    
-
-    #affiche en console le score du dernier lancer de gobelet
-    # def afficher_score(self):
-    #     print(De.lancer())
 
 # lancer = Gobelet(4).lancer()
