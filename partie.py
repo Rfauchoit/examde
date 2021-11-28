@@ -1,8 +1,9 @@
 class Partie :
-    def __init__(self, joueurs, nb_tours) -> None:
-        self.joueurs = joueurs
+    def __init__(self, nb_tours) -> None:
+        self.joueurs = []
         self.nb_tours = nb_tours
-    
+        self.des = des  
+
     @property
     def joueurs(self):
         return self._joueurs
@@ -20,8 +21,10 @@ class Partie :
         self._nb_tours=nb_tours
 
     #permet d'inscrire des joueurs dans la partie
-    def initialiser():
-        pass
+    def initialiser(self, name):
+        self.joueurs.append(name)
+        self.score = []
+        self.finalscore = [0]
     
     #lance la partie : chaque joueur joue à tour de rôle 
     #pendant les n tours. Une fois la partie terminée, affiche le gagnant.
